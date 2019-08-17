@@ -46,6 +46,7 @@ export default {
   background: #fff;
 }
 
-.swiper-wrapper 
-    height 200px
+.swiper-wrapper {
+  height: 200px;
+}
 </style>
