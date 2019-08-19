@@ -14,6 +14,7 @@ import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icon'
 import HomeWeekend from './components/Weekend'
 import HomeLike from './components/Like'
+import axios from 'axios'
 export default {
     name:'Home',
     components:{
@@ -22,6 +23,19 @@ export default {
         HomeIcons,
         HomeWeekend,
         HomeLike
+    },
+    methods: {
+        getHomeInfo () {
+            // 路径使用代理实现转发
+            axios.get('/static/mock/index.json')
+                .then(this.getHomeInfoSucc)
+        },
+        getHomeInfoSucc (res) {
+            console.log(res)
+        },
+    },
+    mounted () {
+        this.getHomeInfo();
     }
 }
 </script>
