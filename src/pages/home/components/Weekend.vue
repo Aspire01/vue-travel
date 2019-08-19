@@ -45,7 +45,7 @@ export default {
         el: ".swiper-scrollbar",
         grabCursor: true,
         slidesPerView: "auto", // 不加这个属性的时候 是无限长
-        mousewheelControl: true, // 能够是的鼠标滚动控制滚动
+        mousewheelControl: false, // 能够是的鼠标滚动控制滚动
         freeMode: true,
         hide: true,
 
