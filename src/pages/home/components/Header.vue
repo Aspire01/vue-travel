@@ -7,16 +7,18 @@
           <span class='iconfont'>&#xe600;</span>
          输入景点/游玩主题
      </div>
-     <div class='header-right'>
+     <router-link to='/city'>
+        <div class='header-right'>
           {{this.city}}
           <span class='iconfont'>&#xe601;</span>
-     </div>
+        </div>
+     </router-link>
     </div>
 </template>
 
 <script>
 export default {
-    name:'Header1',
+    name:'Header',
     props: {
         city: String
     },
@@ -28,6 +30,8 @@ export default {
 
 <style lang="stylus" scoped>
     @import '~styles/varibles.styl';
+    a
+        color #fff
     .header
         background :$bgColor
         display :flex
