@@ -26,34 +26,11 @@
 <script>
 export default {
   name:'HomeLike',
+  props: {
+    likesList: Array
+  },
   data() {
     return {
-      likesList:[
-        {
-          id:'001',
-          img_url:'https://imgs.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg',
-          spot_name:'北京欢乐谷',
-          comments_num:'192',
-          price:'189',
-          location:'朝阳区'
-        },
-          {
-          id:'002',
-          img_url:'https://imgs.qunarzz.com/sight/p0/1804/1a/1a48cc20b0d6ed44a3.img.jpg_200x200_32e22bed.jpg',
-          spot_name:'奥林匹克塔',
-          comments_num:'1956562',
-          price:'1898',
-          location:'东城区'
-        },
-          {
-          id:'003',
-          img_url:'https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
-          spot_name:'故宫',
-          comments_num:'256',
-          price:'235',
-          location:'西城区'
-        }
-      ]
     }
   },
 }

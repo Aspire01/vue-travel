@@ -39,6 +39,9 @@
 <script>
 export default {
   name: "HomeWeekend",
+  props: {
+    spotsList: Array
+  },
   data() {
     return {
       swiperOption: {
@@ -53,67 +56,6 @@ export default {
         // watchSlidesProgress: true,
         // spaceBetween: 2 //设置两个swiper-slide之间的距离
       },
-      spotsList: [
-        {
-          id: "001",
-          imgUrl:
-            "https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_250x250_0fc722c0.jpg",
-          keywords: "故宫",
-          price: "60"
-        },
-        {
-          id: "002",
-          imgUrl:
-            "https://imgs.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_250x250_50c99cf3.jpg",
-          keywords: "八达岭长城",
-          price: "40"
-        },
-        {
-          id: "003",
-          imgUrl:
-            "https://imgs.qunarzz.com/sight/p0/1505/f5/f5f45e1a83537bcb.water.jpg_250x250_63e3520a.jpg",
-          keywords: "八达岭长城",
-          price: "25"
-        },
-        {
-          id: "004",
-          imgUrl:
-            "https://imgs.qunarzz.com/sight/p0/1505/d2/d274c92de14c93da.water.jpg_250x250_d852635b.jpg",
-          keywords: "颐和园",
-          price: "38"
-        },
-
-        {
-          id: "005",
-          imgUrl:
-            "https://imgs.qunarzz.com/sight/p0/201405/12/51b63883c25f5d87af3c08bb016e2bd7.jpg_250x250_6ec2f798.jpg",
-          keywords: "恭王府",
-          price: "58"
-        },
-        {
-          id: "006",
-          imgUrl:
-            "https://imgs.qunarzz.com/sight/p0/1602/92/920e47352552c1c990.water.jpg_250x250_ee99c18e.jpg",
-          keywords: "天坛公园",
-          price: "40"
-        },
-
-        {
-          id: "007",
-          imgUrl:
-            "https://imgs.qunarzz.com/sight/p0/1501/40/40b2b6c951b28fdd.water.jpg_250x250_ecfa0df2.jpg",
-          keywords: "水立方",
-          price: "248"
-        },
-
-        {
-          id: "008",
-          imgUrl:
-            "https://imgs.qunarzz.com/sight/p0/1902/84/84696f368bbec10da3.img.jpg_250x250_3588bc9a.jpg",
-          keywords: "北京世界博览会",
-          price: "123"
-        }
-      ]
     };
   }
 };

@@ -1,10 +1,10 @@
 <<template>
     <div>
         <home-header :city="city"></home-header>
-        <home-swiper></home-swiper>
-        <home-icons></home-icons>
-        <home-weekend></home-weekend>
-        <home-like></home-like>
+        <home-swiper :swiperList="swiperList"></home-swiper>
+        <home-icons :iconsList="iconsList"></home-icons>
+        <home-weekend :spotsList="spotsList"></home-weekend>
+        <home-like :likesList="likesList"></home-like>
     </div>
 </template>
 
@@ -16,7 +16,7 @@ import HomeWeekend from './components/Weekend'
 import HomeLike from './components/Like'
 import axios from 'axios'
 import { log } from 'util';
-import { constants } from 'fs';
+import { constants, truncate } from 'fs';
 export default {
     name:'Home',
     components:{
@@ -28,7 +28,11 @@ export default {
     },
     data () {
         return {
-            city: ''
+            city: '',
+            swiperList:[],
+            iconsList: [],
+            spotsList: [],
+            likesList: []
         }
     },
     methods: {
@@ -42,7 +46,11 @@ export default {
             res = res.data;
             if(res.ret && res.data){
                 let data = res.data
-                this.ctiy = data.city
+                this.city = data.city
+                this.swiperList = data.swiperList
+                this.iconsList = data.iconsList
+                this.spotsList = data.spotsList
+                this.likesList = data.likesList
             }
         },
     },

@@ -9,7 +9,7 @@
      </div>
      <router-link to='/city'>
         <div class='header-right'>
-          {{this.city}}
+          {{city}}
           <span class='iconfont'>&#xe601;</span>
         </div>
      </router-link>
@@ -22,9 +22,6 @@ export default {
     props: {
         city: String
     },
-    mounted() {
-        console.log(this.city)
-    }
 }
 </script>
 
