@@ -17,6 +17,7 @@ import HomeLike from './components/Like'
 import axios from 'axios'
 import { log } from 'util';
 import { constants, truncate } from 'fs';
+import {mapState} from 'vuex'
 export default {
     name:'Home',
     components:{
@@ -31,13 +32,17 @@ export default {
             swiperList:[],
             iconsList: [],
             spotsList: [],
-            likesList: []
+            likesList: [],
+            lastCity: ''
         }
+    },
+    computed: {
+        ...mapState(['city'])
     },
     methods: {
         getHomeInfo () {
             // 路径使用代理实现转发
-            axios.get('/api/index.json')
+            axios.get('/api/index.json?city=' + this.city)
                 .then(this.getHomeInfoSucc)
         },
         getHomeInfoSucc (res) {
@@ -53,7 +58,13 @@ export default {
         },
     },
     mounted () {
+        this.lastCity = this.city
         this.getHomeInfo();
+    },
+    activated(){
+        if(this.lastCity !== this.city){
+            this.getHomeInfo()
+        }
     }
 }
 </script>
